@@ -19,22 +19,84 @@
         </script>
         <script src="js/main.js"></script>
 
+        <!--Codigo de seguimiento google analytics
+        
+        <script>
+
+        var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-XXXXX-X']);
+            _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+
+        </script>
+        -->
 
         <header>
-            <img src="img/logo.svg">
+            <h1>
+                <a href="#home"><img src="img/logo.svg"></a>
+            </h1>
         </header>
-
-                
             <nav>
-                <a href="">Products</a>
-                <a href="">About</a>
-                <a href="">Contact</a>
-            </nav>
+                <div class="container">
+                    <ul>
 
+                        <li>
+                            <a href="#services">Products</a>
+                        </i>
+                        <li>
+                            <a href="#about">About</a>
+                        </li>
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        <section id="home">
+            <article class="container">
+                <h2>En un lugar</h2>
+                <p>
+                    En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que vivía un hidalgo de los de lanza en astillero, adarga antigua, rocín flaco y galgo corredor. Una olla de algo más vaca que carnero, salpicón las más noches, duelos y quebrantos los sábados, lantejas los viernes, algún palomino de añadidura los domingos, consumían las tres partes de su hacienda. 
+                </p>
+            </article>
+            <div class="google-maps">
+
+                <!--Mapa para ver direcciones desde el celular-->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d451.8669858439106!2d121.57469242103933!3d25.03624976164492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aba5bac7e857%3A0x921e11f32098bdd9!2sNo.+161%2C+Songde+Rd%2C+Xinyi+District%2C+Taipei+City%2C+Taiwan+110!5e0!3m2!1sen!2s!4v1411971323267" width="100%" frameborder="0" style="border:0">
+                </iframe>
+            </div>
+
+        </section>
         
         <p></p>
         
         
-        <script src="js/main.js"></script>
+
+
+        <script type="text/javascript">
+
+        $('a[href^="#"]').click(function(event) {
+            var id = $(this).attr("href");
+            var target = $(id).offset().top;
+        $('html, body').animate({scrollTop:target}, 500);
+            event.preventDefault();
+        });
+
+            var offset = $('nav').offset().top;
+        $(window).scroll(function() {
+            if($(this).scrollTop() > offset) {
+        $('nav').addClass('isFixed');
+        } else {
+        $('nav').removeClass('isFixed');
+            }
+        });
+
+        </script>
     </body>
 </html>

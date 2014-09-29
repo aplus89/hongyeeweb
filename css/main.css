@@ -2,24 +2,114 @@
 
 
 /**Body style*/
-body {
+html, body {
+ margin: 0px;
+ padding: 0px;
+ font-family: 'Roboto',sans-serif;
   font-size: 2rem;
-  font-family: 'Roboto', sans-serif;
-  padding: 50px;
+  font-weight: 300;
+  height: 100%;
   color: #E33C9B;
+  background: #fbfbfb;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
 }
 
-
-
-img {
-	width: 50%;
-	padding: 50%;
+header{
+  width: 100%;
+  height: 50%;
+  position: relative;
+  background-image: url('../img/moda.jpg');
+  background-size:cover;
 }
 
+header h1{
+    font-size: 50px;
+    font-weight: 300;
+    margin: auto;
+    padding: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate3d(-50%,-50%,0);
+    transform: translate3d(-50%,-50%,0);
+  }
 
-a {
-  	line-height: 1.1;
-  	display: inline-block;
-  	color: #2B72B2;
-  	text-decoration: none;
+
+nav {
+  background: #fff;
+  clear: both;
+  overflow: hidden;
+}
+	nav ul {
+	  list-style: none;
+	  margin: 0;
+	  padding: 0;
+	}
+		nav ul li {
+		  float: right;
+		  width: 100%;
+		}
+			nav ul li a {
+			  display: block;
+			  padding: 25px 20px;
+			  text-decoration: none;
+			  color: #2B72B2;
+			  font-weight: normal;
+			}
+				nav ul li a:hover {
+				  background: #eee;
+				}
+
+section {
+  width: 100%;
+  height: 50%;
+  color: #444;
+}
+	section article {
+	  padding: 50px 0;
+	}
+
+		section:nth-of-type(odd) {
+		  background: #fff;
+		}
+
+
+
+
+/*clasess en orden alfabetico*/
+
+.container{
+  width: 1000px;
+  max-width: 100%;
+  margin: auto;
+}
+
+/*google maps responsive design*/
+
+.google-maps {
+        position: relative;
+        padding-bottom: 75%; // This is the aspect ratio
+        height: 0;
+        overflow: hidden;
+    }
+
+    .google-maps iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+
+
+/*helper*/
+.isFixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 1px 0 #eee;
 }
